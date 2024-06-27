@@ -162,3 +162,125 @@ https://hwmgu1yf37x.feishu.cn/docx/DSR3dePOco3XRkx0z1ocCWYMnue
 8. ppy colours
 9. Rider UI Theme Pack
 10. Catppuccin Theme(喜欢)
+
+
+#  IDEA中使用git，并且配置git忽略文件
+
+当在IDEA中编写好一个项目，想要用git上传到远程仓库时。有一些文件是不用上传的比如.gradle、.idea和build目录下的。  
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/215a063c075b4e84a2e81b12b1ca50dc.png)
+
+
+此时可以配置git忽略文件，从而忽略不需要上传的文件。  
+1）第一步在C:\Users\用户 目录下新建一个.gitignore文件然后再文件中写入要忽视的文件或目录  
+![在这里插入图片描述](https://img-blog.csdnimg.cn/0c271f1e079a41ccb96d71d928086fa9.png)
+
+
+```java
+	*.class
+	*.log
+	*.ctxt
+	*.mtj.tmp/
+	*.war
+	*.nar
+	*.ear
+	*.zip
+	*.tar.gz
+	*.rar
+	*.iml
+	
+	.classpath
+	.project
+	.settings
+	target
+	build
+	.idea
+	.gradle
+```
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/820aa32a82224d6fa7a3883f5fde3422.png)  
+
+2) 在C:\Users\用户 目录下的.gitconfig文件中写入
+
+```java
+[core]
+	excludesfile = C:/Users/自己的用户名/.gitignore
+```
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/e7c0d62943814ac29f535e19bc99900a.png)
+
+注意：在最开始用git时，如果用过下面的命令，那么就会有.gitconfig这个文件
+git config --global user.name 用户名 《设置用户签名》
+git config --global user.email 邮箱 《设置用户签名》
+3) 打开本地的项目，设置项目git路径，为本地安装的git的路径。
+
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/262fbb8452f74200bc60654810fdf8ff.png)
+
+4) 新建git 点击Create Git Repository，然后选择本地项目目录，最后点OK  
+![在这里插入图片描述](https://img-blog.csdnimg.cn/cd2efd8ef6fc4045a337174bb86bd85f.png)
+
+6) 此时结果如下图（被git忽视的文件颜色偏淡）  
+![在这里插入图片描述](https://img-blog.csdnimg.cn/2597a6210b274992b775d9557ffeef44.png)
+
+此时被忽视的内容是不能add和commit的。![在这里插入图片描述](https://img-blog.csdnimg.cn/28fb5e26779b473f98ae53c02bfe366f.png)
+
+没有被忽视的内容是可以add 和commit的。
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/d5e7f5eff6f54ed086fc4081d4cd2ca8.png)
+
+7）将代码 **add** 暂存区  
+右键项目 --> Git --> Add  
+![在这里插入图片描述](https://img-blog.csdnimg.cn/4ae6c53f708845bfb71c7b6774824de1.png)
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/ccd76e831e4540dcaf6bed540ce15048.png)
+
+8) 将代码 **commit** 到 本地仓库  
+右键项目–>Git–>Commit Directory  
+![在这里插入图片描述](https://img-blog.csdnimg.cn/59a36fb1c9204c16b964438fcd4a5e7b.png)
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/644b6c4019ca456983704877348bb574.png)
+
+9）将代码 **push** 到远程库(代码托管中新) 此处是push到gitee  
+在gitee上新建远程仓库  
+![在这里插入图片描述](https://img-blog.csdnimg.cn/f05a6b514d7844bca896d2519240103c.png)
+
+复制远程仓库地址  
+![在这里插入图片描述](https://img-blog.csdnimg.cn/18cbbec991a2411fadbdfc000bf00f05.png)
+
+
+IDEA中点击Git --> push  
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/d298dd82cd204c1692371942c9389a01.png)
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/415d07a8ae0e4510b56f47979daae1fd.png)  
+![在这里插入图片描述](https://img-blog.csdnimg.cn/9d83f93926ec4859a1f65549c9fe1935.png)
+
+其中某一步骤应该会要求输入gitee的账号和密码。  
+此处就可以看到，已将本地项目，提交到了远程库中  
+![在这里插入图片描述](https://img-blog.csdnimg.cn/0e0dc6d94c3745ed8ba4aac4de3d0cb3.png)
+
+
+补充说明：git常用命令
+
+```java
+1) git config --global user.name 用户名              《设置用户签名》
+2) git config --global user.email 邮箱               《设置用户签名》
+3) git init                                          《初始化本地库，管理项目》
+4) git status      《查看本地库状态》
+6) git add 文件名     《添加到暂存区》
+7) git rm --cached 文件名      《将暂存区里的文件删除，工作区里还是有的》
+8) git commit -m "日志信息" 文件名     《提交的本地库》
+9) git reflog     《查看版本信息》
+10) git log      《查看版本详细信息》
+11) git reset --hard 版本号     《版本穿梭，回到任意版本(如git reset --hard 9aa3670)》
+12) git branch 分支名      《创建分支》
+13) git branch -v      《查看分支》 
+14) git checkout 分支名    《更换分支》
+15) git merge 分支名     《把指定的分支和并到当前分支上》
+16) git remote -v       《查看当前所有远程地址别名》
+17) git remote add 别名 远程地址    《创建远程地址别名》
+18) git push 别名 分支        《将本地仓库内容推送到远程仓库(或者 git push 远程地址 分支)》
+19) git pull 别名 分支      《将远程仓库内容拉取到本地仓库》
+20) git clone 远程地址    《将远程仓库内容克隆到本地仓库》
+```
