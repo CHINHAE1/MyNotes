@@ -123,6 +123,28 @@ brew install \
 - [uPic](https://github.com/gee1k/uPic)
 - [ChatGPT x Tauri](https://github.com/lencx/ChatGPT)
 - 阿里钉
+
+
+5.自己的软件
+- Latest `卸载软件`
+- Xmind
+- Pixeur `取色`
+- Snipaste `截图`
+- Keka `压缩`
+- Rectangle `分屏`
+- Lx Music
+- IINA `播放器`
+- Battery `电池`
+- Bob `翻译`
+- pap.er `壁纸`
+- Macs Fan Control `风扇`
+- Xnip `截图`
+- IRightMenu `右键新建`
+- ClashX
+- YesPlayMusic
+- Iterm
+- Mos `鼠标`
+- Skim `pdf`
 ## 准备本地目录
 
 我在 ~/Documents 下建了两个目录（新电脑还没施工完成，这里还会补充更多目录），Code 和 SoftwareConfiguration，[长这样](https://img.alicdn.com/imgextra/i2/O1CN01s0ARb525kp39GuaWu_!!6000000007565-2-tps-480-562.png)。Code 用于存代码；SoftwareConfiguration 用于保存各种软件配置，我把 Alfred、Eagle 和 Espanso 的配置放在这里。
