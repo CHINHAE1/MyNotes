@@ -125,7 +125,12 @@ https://docs.qq.com/doc/DSEZOSUZ0eVZmWUZj
 1. Alibaba Java Coding Guidelines   `代码格式`
 2. CodeGlance Pro    `代码滚轮,上下快速翻滚`
 3. Fitten Code
-4. GitHub Copilot
+4. GitHub Copilot  ```
+```
+使用教程：https://www.kdocs.cn/l/clHzGboXhYOG
+
+授权码：C589EAFC-178B-4E26-A204-915E8E7DEEE3
+```
 5. google-java-format   `格式化代码`
 	- google-java-format 配置及应用
 	- https://blog.csdn.net/youxijishu/article/details/135350055
