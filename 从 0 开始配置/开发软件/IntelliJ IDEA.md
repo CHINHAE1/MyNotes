@@ -6,7 +6,8 @@
 
 激活->淘宝
 
-https://hwmgu1yf37x.feishu.cn/docx/DSR3dePOco3XRkx0z1ocCWYMnue
+https://docs.qq.com/doc/DSEZOSUZ0eVZmWUZj
+
 
 
 # 快捷键
