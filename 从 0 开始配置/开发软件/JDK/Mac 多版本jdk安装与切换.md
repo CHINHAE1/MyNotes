@@ -43,7 +43,7 @@ alias jdk17="export JAVA_HOME=$JAVA_17_HOME"
 ```
 
 执行命令
-`source .bash_profile`
+j
 
 ### 4.切换jdk
 
