@@ -16,8 +16,9 @@
 > 
 > ② 输入i进入编辑模式，然后输入 Maven 的环境变量：
 > 
-> export M2_HOME=/Users/arctic.kong/Documents/dev_software/apache-maven-3.8.8
-> export PATH=$PATH:$M2_HOME/bin
+> `export M2_HOME=/Users/arctic.kong/Documents/dev_software/apache-maven-3.8.8` 
+> **注意:这里填写的是你解压出来maven的文件夹路径**
+> `export PATH=$PATH:$M2_HOME/bin`
 > 
 > 通过echo $JAVA_HOME查看是否配置过 JAVA_HOME ，如果 JAVA_HOME 没有配置，还需要导入 JAVA_HOME 环境变量：
 > 
@@ -27,7 +28,7 @@
 > 
 > ④ 输入source ~/.bash_profile   或者   source ~/.zshrc  使环境变量生效。
 > 
-> ⑤ 输入mvn -v查看 Maven 否安装成功。
+> ⑤ 输入m查看 Maven 否安装成功。
 > 
 >   
 
@@ -45,7 +46,7 @@
 ![](https://img2023.cnblogs.com/blog/667853/202303/667853-20230329104649863-359588840.png)
 
 ## .2 配置阿里云镜像
-
+```
 <mirror>  
 <id>maven-default-http-blocker</id>  
 <mirrorOf>external:http:*</mirrorOf>  
@@ -53,15 +54,18 @@
 <url>http://0.0.0.0/</url>  
 <blocked>true</blocked>  
 </mirror>
+```
+
 
 用以下内容替换上面代码  
+```
 <mirror>  
 <id>alimaven</id>  
 <mirrorOf>central</mirrorOf>  
 <name>aliyun maven</name>  
 <url>http://maven.aliyun.com/nexus/content/groups/public/</url>  
 </mirror>  
-  
+```
 
 # 4、准备工作已经完成，下面就可以去Idea中进行使用了
 
