@@ -121,3 +121,26 @@
 5、找到sublime text安装目录，备份原来的sublime_text.exe，命名为：sublime_text_bak.exe。将新保存的sublime_text.exe复制到原sublime text 4安装目录中。![图片](https://img-blog.csdnimg.cn/img_convert/149be2043b147c5d83ff5055c7d604c1.png)
 
 
+# mac激活
+
+注意：
+请务必保存好注册信息，不要泄露
+----- BEGIN LICENSE -----
+MF#627
+Single User License
+EA7E-1262338-452690
+ABB636F3 B81D12C8 72DB427A 676B673C
+671C2A7B 8E66C0E1 DB0CB9A5 9C102D68
+DFD5588D 6E0CC826 9CF2BAEB 6955CE03
+16438A0A 358F31A2 91A5E0AC 8A1AFFCC
+282221ED 8AD3B9CF DFB5E8BD D94E2271
+5076A0D6 176DA088 919E65AB EBE0C128
+92141E76 3D2DAA23 A9C85B6A 4090AC14
+D56F6B1A 9743B02F 23497557 838490FB
+------ END LICENSE ———
+激活软件--> 顶部导航Help里点> Enter License
+以上内容全部复制，然后粘贴激活。
+下载地址：https://www.sublimetext.com
+注意：—– BEGIN LICENSE —– 和—— END LICENSE —— 都要复制粘贴进去。
+
+==

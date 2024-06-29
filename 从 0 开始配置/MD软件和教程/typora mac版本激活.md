@@ -17,3 +17,4 @@
 将它改为  `hasActivated="true"=="true"`
 
 重新打开typora看到成功激活！！！
+
