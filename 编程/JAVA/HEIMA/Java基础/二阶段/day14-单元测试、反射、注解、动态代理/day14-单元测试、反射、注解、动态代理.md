@@ -45,7 +45,7 @@ public class StringUtil{
 接下来，写一个测试类，测试StringUtil工具类中的方法能否正常使用。
 
 ```java
-public class StringUtilTest{
+public class pv{
     @Test
     public void testPrintNumber(){
         StringUtil.printNumber("admin");
@@ -56,7 +56,7 @@ public class StringUtilTest{
 
 写完代码之后，我们会发现测试方法左边，会有一个绿色的三角形按钮。点击这个按钮，就可以运行测试方法。
 
-![1668507501024](attachments/day14-单元测试、反射、注解、动态代理_image_4.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_4.png)
 
 ### 1.2 单元测试断言
 
@@ -93,7 +93,7 @@ public class StringUtilTest{
 
 运行测试方法，结果如下图所示，表示我们预期值与实际值不一致
 
-![1668508226111](attachments/day14-单元测试、反射、注解、动态代理_image_5.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_5.png)
 
 ### 1.3 Junit框架的常用注解
 
@@ -101,7 +101,7 @@ public class StringUtilTest{
 
 除了@Test注解，还有一些其他的注解，我们要知道其他注解标记的方法什么时候执行，以及其他注解在什么场景下可以使用。
 
-![1668508373865](attachments/day14-单元测试、反射、注解、动态代理_image_6.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_6.png)
 
 接下来，我们演示一下其他注解的使用。我们在StringUtilTest测试类中，再新增几个测试方法。代码如下
 
@@ -135,7 +135,7 @@ public class StringUtilTest{
 4.被@After标记的方法，执行在每一个@Test方法之后
 ```
 
-![1668508793279](attachments/day14-单元测试、反射、注解、动态代理_image_7.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_7.png)
 
 我们现在已经知道每一个注解的作用了，那他们有什么用呢？应用场景在哪里?
 
@@ -169,7 +169,7 @@ public class StringUtilTest{
 
 最后，我们再补充一点。前面的注解是基于Junit4版本的，再Junit5版本中对注解作了更新，但是作用是一样的。所以这里就不做演示了
 
-![1668509275659](attachments/day14-单元测试、反射、注解、动态代理_image_8.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_8.png)
 
 
 
@@ -179,13 +179,13 @@ public class StringUtilTest{
 
 接下来，我们就需要带着同学们认识一下什么是反射。其实API文档中对反射有详细的说明，我们去了解一下。在java.lang.reflect包中对反射的解释如下图所示
 
-![1668575265599](attachments/day14-单元测试、反射、注解、动态代理_image_9.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_9.png)
 
 翻译成人话就是：**反射技术，指的是加载类的字节码到内存，并以编程的方法解刨出类中的各个成分（成员变量、方法、构造器等）。**
 
 反射有啥用呢？其实反射是用来写框架用的，但是现阶段同学们对框架还没有太多感觉。为了方便理解，我给同学们看一个我们见过的例子：平时我们用IDEA开发程序时，用对象调用方法，IDEA会有代码提示，idea会将这个对象能调用的方法都给你列举出来，供你选择，如果下图所示
 
-![1668575796295](attachments/day14-单元测试、反射、注解、动态代理_image_10.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_10.png)
 
 问题是IDEA怎么知道这个对象有这些方法可以调用呢? 原因是对象能调用的方法全都来自于类，IDEA通过反射技术就可以获取到类中有哪些方法，并且把方法的名称以提示框的形式显示出来，所以你能看到这些提示了。
 
@@ -197,13 +197,13 @@ public class StringUtilTest{
 
 如下图所示：
 
-![1668576426355](attachments/day14-单元测试、反射、注解、动态代理_image_11.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_11.png)
 
 ### 1.1 获取类的字节码
 
 反射的第一步：是将字节码加载到内存，我们需要获取到的字节码对象。
 
-![1668576691591](attachments/day14-单元测试、反射、注解、动态代理_image_12.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_12.png)
 
 比如有一个Student类，获取Student类的字节码代码有三种写法。不管用哪一种方式，获取到的字节码对象其实是同一个。
 
@@ -232,7 +232,7 @@ public class Test1Class{
 
 获取构造器，需要用到Class类提供的几个方法，如下图所示：
 
-![1668577010983](attachments/day14-单元测试、反射、注解、动态代理_image_13.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_13.png)
 
 想要快速记住这个方法的区别，给同学们说一下这些方法的命名规律，按照规律来记就很方便了。
 
@@ -281,7 +281,7 @@ public class Test2Constructor(){
 
 运行测试方法打印结果如下
 
-![1668578112815](attachments/day14-单元测试、反射、注解、动态代理_image_14.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_14.png)
 
 - 2. 刚才演示的是获取Cat类中所有的构造器，接下来，我们演示单个构造器试一试
 
@@ -308,7 +308,7 @@ public class Test2Constructor(){
 
 打印结果如下
 
-![1668578397467](attachments/day14-单元测试、反射、注解、动态代理_image_15.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_15.png)
 
 
 
@@ -320,21 +320,21 @@ public class Test2Constructor(){
 
 这里我们需要用到如下的两个方法，注意：这两个方法时属于Constructor的，需要用Constructor对象来调用。 
 
-![1668578639149](attachments/day14-单元测试、反射、注解、动态代理_image_16.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_16.png)
 
 如下图所示，constructor1和constructor2分别表示Cat类中的两个构造器。现在我要把这两个构造器执行起来
 
-![1668578807439](attachments/day14-单元测试、反射、注解、动态代理_image_17.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_17.png)
 
 由于构造器是private修饰的，先需要调用`setAccessible(true)` 表示禁止检查访问控制，然后再调用`newInstance(实参列表)` 就可以执行构造器，完成对象的初始化了。
 
 代码如下：为了看到构造器真的执行， 故意在两个构造器中分别加了两个打印语句
 
-![1668579315586](attachments/day14-单元测试、反射、注解、动态代理_image_18.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_18.png)
 
 代码的执行结果如下图所示：
 
-![1668579177901](attachments/day14-单元测试、反射、注解、动态代理_image_19.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_19.png)
 
 
 
@@ -344,7 +344,7 @@ public class Test2Constructor(){
 
 其实套路是一样的，在Class类中提供了获取成员变量的方法，如下图所示。
 
-![1668579517323](attachments/day14-单元测试、反射、注解、动态代理_image_20.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_20.png)
 
 这些方法的记忆规则，如下
 
@@ -357,25 +357,25 @@ Field: 成员变量的意思
 
 - 假设有一个Cat类它有若干个成员变量，用Class类提供 的方法将成员变量的对象获取出来。
 
-![1668579681294](attachments/day14-单元测试、反射、注解、动态代理_image_21.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_21.png)
 
 执行完上面的代码之后，我们可以看到控制台上打印输出了，每一个成员变量的名称和它的类型。
 
-![1668579804732](attachments/day14-单元测试、反射、注解、动态代理_image_22.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_22.png)
 
 - 获取到成员变量的对象之后该如何使用呢？
 
 在Filed类中提供给给成员变量赋值和获取值的方法，如下图所示。
 
-![1668580075962](attachments/day14-单元测试、反射、注解、动态代理_image_23.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_23.png)
 
 再次强调一下设置值、获取值的方法时Filed类的需要用Filed类的对象来调用，而且不管是设置值、还是获取值，都需要依赖于该变量所属的对象。代码如下
 
-![1668580288930](attachments/day14-单元测试、反射、注解、动态代理_image_24.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_24.png)
 
 执行代码，控制台会有如下的打印
 
-![1668580517173](attachments/day14-单元测试、反射、注解、动态代理_image_25.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_25.png)
 
 
 
@@ -385,7 +385,7 @@ Field: 成员变量的意思
 
 在Java中反射包中，每一个成员方法用Method对象来表示，通过Class类提供的方法可以获取类中的成员方法对象。如下下图所示
 
-![1668580761089](attachments/day14-单元测试、反射、注解、动态代理_image_26.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_26.png)
 
 接下来我们还是用代码演示一下：假设有一个Cat类，在Cat类中红有若干个成员方法
 
@@ -452,11 +452,11 @@ public class Test3Method{
 
 执行上面的代码，运行结果如下图所示：**打印输出每一个成员方法的名称、参数格式、返回值类型**
 
-![1668581537215](attachments/day14-单元测试、反射、注解、动态代理_image_27.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_27.png)
 
 也能获取单个指定的成员方法，如下图所示
 
-![1668581678388](attachments/day14-单元测试、反射、注解、动态代理_image_28.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_28.png)
 
 ---
 
@@ -464,7 +464,7 @@ public class Test3Method{
 
 在Method类中提供了方法，可以将方法自己执行起来。
 
-![1668581800777](attachments/day14-单元测试、反射、注解、动态代理_image_29.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_29.png)
 
 下面我们演示一下，把`run()`方法和`eat(String name)`方法执行起来。看分割线之下的代码
 
@@ -502,7 +502,7 @@ public class Test3Method{
 
 打印结果如下图所示：run()方法执行后打印`猫跑得贼快~~`，返回`null`； eat()方法执行完，直接返回`猫最爱吃:鱼儿`
 
-![1668582519455](attachments/day14-单元测试、反射、注解、动态代理_image_30.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_30.png)
 
 
 
@@ -512,7 +512,7 @@ public class Test3Method{
 
 我们一直说反射使用来写框架的，接下来，我们就写一个简易的框架，简单窥探一下反射的应用。反射其实是非常强大的，这个案例也仅仅值小试牛刀。
 
-![1668583255686](attachments/day14-单元测试、反射、注解、动态代理_image_31.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_31.png)
 
 需求是让我们写一个框架，能够将任意一个对象的属性名和属性值写到文件中去。不管这个对象有多少个属性，也不管这个对象的属性名是否相同。
 
@@ -592,7 +592,7 @@ public class Test5Frame{
 
 打开data.txt文件，内容如下图所示，就说明我们这个框架的功能已经实现了
 
-![1668584556229](attachments/day14-单元测试、反射、注解、动态代理_image_32.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_32.png)
 
 好了，同学们，恭喜大家！学习到这里，反射技术已经学习完毕了。
 
@@ -616,7 +616,7 @@ public class Test5Frame{
 
 再比如：@Override注解可以用在方法上，用来标记这个方法是重写方法，被@Override注解标记的方法能够被IDEA识别进行语法检查。
 
-![1669603664584](attachments/day14-单元测试、反射、注解、动态代理_image_33.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_33.png)
 
 - **注解不光可以用在方法上，还可以用在类上、变量上、构造器上等位置。**
 
@@ -626,7 +626,7 @@ public class Test5Frame{
 
 自定义注解的格式如下图所示
 
-![1669604102185](attachments/day14-单元测试、反射、注解、动态代理_image_34.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_34.png)
 
 比如：现在我们自定义一个MyTest注解
 
@@ -685,7 +685,7 @@ public class AnnotationTest1{
 4.@MyTest1(aaa="孙悟空",bbb=false,ccc={"Python","前端","Java"})里面的属性值，可以通过调用aaa()、bbb()、ccc()方法获取到。 【别着急，继续往下看，再解析注解时会用到】
 ```
 
-![1669604928912](attachments/day14-单元测试、反射、注解、动态代理_image_35.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_35.png)
 
 
 
@@ -697,7 +697,7 @@ public class AnnotationTest1{
 
 **元注解是修饰注解的注解**。这句话虽然有一点饶，但是非常准确。我们看一个例子
 
-![1669605746113](attachments/day14-单元测试、反射、注解、动态代理_image_36.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_36.png)
 
 接下来分别看一下@Target注解和@Retention注解有什么作用，如下图所示
 
@@ -706,7 +706,7 @@ public class AnnotationTest1{
 @Retetion是用来声明注解保留周期，比如：源代码时期、字节码时期、运行时期
 ```
 
-![1669605786028](attachments/day14-单元测试、反射、注解、动态代理_image_37.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_37.png)
 
 - @Target元注解的使用：比如定义一个MyTest3注解，并添加@Target注解用来声明MyTest3的使用位置
 
@@ -719,7 +719,7 @@ public @interface MyTest3{
 
 接下来，我们把@MyTest3用来类上观察是否有错，再把@MyTest3用在方法上、变量上再观察是否有错
 
-![1669606261919](attachments/day14-单元测试、反射、注解、动态代理_image_38.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_38.png)
 
 如果我们定义MyTest3注解时，使用@Target注解属性值写成下面样子
 
@@ -733,7 +733,7 @@ public @interface MyTest3{
 
 此时再观察，@MyTest用在类上、方法上、变量上是否有错
 
-![1669606451308](attachments/day14-单元测试、反射、注解、动态代理_image_39.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_39.png)
 
 到这里@Target元注解的使用就演示完毕了。
 
@@ -776,11 +776,11 @@ public @interface MyTest3{
 总之：注解在谁身上，就先获取谁，再用谁获取谁身上的注解
 ```
 
-![1669607820853](attachments/day14-单元测试、反射、注解、动态代理_image_40.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_40.png)
 
 解析来看一个案例，来演示解析注解的代码编写
 
-![1669607882128](attachments/day14-单元测试、反射、注解、动态代理_image_41.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_41.png)
 
 按照需求要求一步一步完成
 
@@ -916,17 +916,17 @@ public class AnnotationTest4{
 
 假设现在有一个大明星叫杨超越，它有唱歌和跳舞的本领，作为大明星是要用唱歌和跳舞来赚钱的，但是每次做节目，唱歌的时候要准备话筒、收钱，再唱歌；跳舞的时候也要准备场地、收钱、再唱歌。杨超越越觉得我擅长的做的事情是唱歌，和跳舞，但是每次唱歌和跳舞之前或者之后都要做一些繁琐的事情，有点烦。于是杨超越就找个一个经济公司，请了一个代理人，代理杨超越处理这些事情，如果有人想请杨超越演出，直接找代理人就可以了。如下图所示
 
-![1669619673533](attachments/day14-单元测试、反射、注解、动态代理_image_42.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_42.png)
 
 我们说杨超越的代理是中介公司派的，那中介公司怎么知道，要派一个有唱歌和跳舞功能的代理呢？
 
 解决这个问题，Java使用的是接口，杨超越想找代理，在Java中需要杨超越实现了一个接口，接口中规定要唱歌和跳舞的方法。Java就可以通过这个接口为杨超越生成一个代理对象，只要接口中有的方法代理对象也会有。
 
-![1669619922161](attachments/day14-单元测试、反射、注解、动态代理_image_43.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_43.png)
 
 接下来我们就先把有唱歌和跳舞功能的接口，和实现接口的大明星类定义出来。
 
-![1669620054411](attachments/day14-单元测试、反射、注解、动态代理_image_44.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_44.png)
 
 ### 4.2 生成动态代理对象
 
@@ -934,7 +934,7 @@ public class AnnotationTest4{
 
 通过Proxy类的newInstance(...)方法可以为实现了同一接口的类生成代理对象。 调用方法时需要传递三个参数，该方法的参数解释可以查阅API文档，如下。
 
-![1669620794550](attachments/day14-单元测试、反射、注解、动态代理_image_45.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_45.png)
 
 ```java
 public class ProxyUtil {
@@ -984,7 +984,7 @@ public class Test {
 
 运行测试类，结果如下图所示
 
-![1669621045622](attachments/day14-单元测试、反射、注解、动态代理_image_46.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_46.png)
 
 恭喜同学们，当你把上面的案例写出来，并且理解，那么动态代理的基本使用就学会了。
 
@@ -994,7 +994,7 @@ public class Test {
 
 学习完动态代理的基本使用之后，接下来我们再做一个应用案例。
 
-![1669621165245](attachments/day14-单元测试、反射、注解、动态代理_image_47.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_47.png)
 
 现有如下代码
 
@@ -1058,7 +1058,7 @@ public class UserServiceImpl implements UserService{
 
 我们会发现每一个方法中计算耗时的代码都是重复的，我们可是学习了动态代理的高级程序员，怎么能忍受在每个方法中写重复代码呢！况且这些重复的代码并不属于UserSerivce的主要业务代码。
 
-![1669621335888](attachments/day14-单元测试、反射、注解、动态代理_image_48.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_48.png)
 
 所以接下来我们打算，把计算每一个方法的耗时操作，交给代理对象来做。
 
@@ -1160,11 +1160,11 @@ public class Test {
 
 执行结果如下图所示
 
-![1669622545712](attachments/day14-单元测试、反射、注解、动态代理_image_49.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_49.png)
 
 动态代理对象的执行流程如下图所示，每次用代理对象调用方法时，都会执行InvocationHandler中的invoke方法。
 
-![1669622605490](attachments/day14-单元测试、反射、注解、动态代理_image_50.png)
+![](attachments/day14-单元测试、反射、注解、动态代理_image_50.png)
 
 恭喜同学们，动态代理我们已经学习完了。到此整个JavaSE的课程也学习完了。
 
