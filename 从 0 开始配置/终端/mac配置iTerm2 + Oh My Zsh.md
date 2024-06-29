@@ -20,6 +20,11 @@ vi ~/.zshrc
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ```
 
+也可以用一下脚本自动添加到末尾:
+```java
+echo "source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+```
+
 执行：
 `source ~/.zshrc`
 

@@ -10,7 +10,7 @@
 > 
 > ① 打开终端 ，
 > 
-> 如果使用的shell 是 bash    输入vim ~/.bash_profile。
+> 如果使用的shell 是 bash    输入vim ~/.bash_profile
 > 
 > 如果使用的shell 是 zsh     输入  vim ~/.zshrc
 > 
