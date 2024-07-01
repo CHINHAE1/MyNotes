@@ -124,8 +124,7 @@ brew install \
 - [ChatGPT x Tauri](https://github.com/lencx/ChatGPT)
 - 阿里钉
 
-
-5.自己的软件
+# 5.自己的软件
 - Latest `卸载软件`
 - Xmind
 - Pixeur `取色`
@@ -145,6 +144,21 @@ brew install \
 - Iterm
 - Mos `鼠标`
 - Skim `pdf`
+- Yoink `文件暂存`
+- Maccy `剪贴板`
+- Only Switch `快捷开关`
+- uTools `集成软件`
+- Stats `内存占用等显示`
+- Bartender 5 `图标隐藏`
+- pomodorome `番茄计时`
+- MenubarX `小屏手机插件`
+- SoundSource `音频控制插件`
+- BetterDisplay `显示器分辨率`
+- QSpace Pro `mac访达`
+- app cleaner & uninstaller `卸载`
+
+
+
 ## 准备本地目录
 
 我在 ~/Documents 下建了两个目录（新电脑还没施工完成，这里还会补充更多目录），Code 和 SoftwareConfiguration，[长这样](https://img.alicdn.com/imgextra/i2/O1CN01s0ARb525kp39GuaWu_!!6000000007565-2-tps-480-562.png)。Code 用于存代码；SoftwareConfiguration 用于保存各种软件配置，我把 Alfred、Eagle 和 Espanso 的配置放在这里。
