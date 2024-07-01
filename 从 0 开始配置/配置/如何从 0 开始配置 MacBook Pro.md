@@ -147,7 +147,7 @@ brew install \
 - Yoink `文件暂存`
 - Maccy `剪贴板`
 - Only Switch `快捷开关`
-- uTools `集成软件`
+- uTools `集成软件,用这个就可以不用剪贴板等`
 - Stats `内存占用等显示`
 - Bartender 5 `图标隐藏`
 - pomodorome `番茄计时`
