@@ -15,6 +15,9 @@
 4. Blue Topaz
 5. Chime
 
+asdasdas
+asd
+
 
 
 # 使用git+obsidian实现双链笔记（macOS)
@@ -140,10 +143,10 @@ cd:change directory切换目录
 
 里面输入如图:
 
-![](attachments/Pasted%20image%2020240627043640.png)
+![](attachments/obsidian_image_1.png)
 
 
-![](attachments/Pasted%20image%2020240627060319.png)
+![](attachments/obsidian_image_2.png)
 
 ## 2.命令面板快捷键 CTRL + P
 
