@@ -15,8 +15,6 @@
 4. Blue Topaz
 5. Chime
 
-asdasdas
-asd
 
 
 
