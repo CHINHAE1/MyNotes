@@ -4,7 +4,7 @@
 
 汉化->Plugins->搜索Chinese
 
-激活->淘宝
+激活->
 
 https://docs.qq.com/doc/DSEZOSUZ0eVZmWUZj
 
