@@ -1,4 +1,3 @@
-视频版见 [https://www.bilibili.com/video/BV1e14y1c7aJ/](https://www.bilibili.com/video/BV1e14y1c7aJ/) 。
 
 
 去掉小红点
@@ -125,7 +124,7 @@ brew install \
 - 阿里钉
 
 # 5.自己的软件
-- Latest `卸载软件`
+- Latest 
 - Xmind
 - Pixeur `取色`
 - Snipaste `截图`
@@ -154,12 +153,13 @@ brew install \
 - MenubarX `小屏手机插件`
 - SoundSource `音频控制插件`
 - BetterDisplay `显示器分辨率`
-- QSpace Pro `mac访达,可以不用,很麻烦`
+- QSpace Pro `mac访达,可以不用,麻烦`
 - app cleaner & uninstaller `卸载`
 - Downie 4 `视频下载`
 - Permute 3 `格式转换`
 - Final Cut Pro `视频剪辑`
 - Logic Pro `音频制作`
+- duet display `分屏软件`
 
 
 
