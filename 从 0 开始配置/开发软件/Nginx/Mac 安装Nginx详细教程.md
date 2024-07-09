@@ -89,3 +89,184 @@ homebrew是什么？它是Mac中的一款软件包管理工具，通过brew可�
 
 如果成功的话，一般都是 欢迎的界面(index.html页面我自己改过)，下面我们继续查看下nginx.conf 配置信息，使用如下命令：
 
+```java
+cat /usr/local/etc/nginx/nginx.conf // 或者使用 sudo open /usr/local/etc/nginx/nginx.conf -a 'sublime text' 使用编辑器sublime打开。
+```
+
+如下配置信息：
+
+```java
+#user  nginx;
+worker_processes  1;
+ 
+#error_log  logs/error.log;
+#error_log  logs/error.log  notice;
+#error_log  logs/error.log  info;
+ 
+#pid        logs/nginx.pid;
+ 
+ 
+events {
+    worker_connections  1024;
+}
+ 
+ 
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+ 
+    #log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+    #                  '$status $body_bytes_sent "$http_referer" '
+    #                  '"$http_user_agent" "$http_x_forwarded_for"';
+ 
+    #access_log  logs/access.log  main;
+ 
+    sendfile        on;
+    #tcp_nopush     on;
+ 
+    #keepalive_timeout  0;
+    keepalive_timeout  65;
+ 
+    #gzip  on;
+ 
+    server {
+        listen       8080; 
+        server_name  localhost; 
+ 
+        #charset koi8-r;
+ 
+        #access_log  logs/host.access.log  main;
+ 
+        location / {
+            root   html; 
+            index  index.html index.htm; 
+        }
+ 
+        #error_page  404              /404.html;
+ 
+        # redirect server error pages to the static page /50x.html
+        #
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+ 
+        # proxy the PHP scripts to Apache listening on 127.0.0.1:80
+        #
+        #location ~ \.php$ {
+        #    proxy_pass   http://127.0.0.1;
+        #}
+ 
+        # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+        #
+        #location ~ \.php$ {
+        #    root           html;
+        #    fastcgi_pass   127.0.0.1:9000;
+        #    fastcgi_index  index.php;
+        #    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;
+        #    include        fastcgi_params;
+        #}
+ 
+        # deny access to .htaccess files, if Apache's document root
+        # concurs with nginx's one
+        #
+        #location ~ /\.ht {
+        #    deny  all;
+        #}
+    }
+ 
+    # another virtual host using mix of IP-, name-, and port-based configuration
+    #
+    #server {
+    #    listen       8000;
+    #    listen       somename:8080;
+    #    server_name  somename  alias  another.alias;
+ 
+    #    location / {
+    #        root   html;
+    #        index  index.html index.htm;
+    #    }
+    #}
+ 
+ 
+    # HTTPS server
+    #
+    #server {
+    #    listen       443 ssl;
+    #    server_name  localhost;
+ 
+    #    ssl_certificate      cert.pem;
+    #    ssl_certificate_key  cert.key;
+ 
+    #    ssl_session_cache    shared:SSL:1m;
+    #    ssl_session_timeout  5m;
+ 
+    #    ssl_ciphers  HIGH:!aNULL:!MD5;
+    #    ssl_prefer_server_ciphers  on;
+ 
+    #    location / {
+    #        root   html;
+    #        index  index.html index.htm;
+    #    }
+    #}
+    include servers/*;
+}
+```
+
+如上，就可以使用nginx搭建本地服务了。
+
+三、总结nginx常见的配置
+nginx的配置文件路径：/usr/local/etc/nginx/nginx.conf
+nginx的服务器默认路径：/usr/local/var/www
+nginx的安装路径：/usr/local/Cellar/nginx/1.15.5
+
+1、nginx启动：
+1.1、在终端输入 ps -ef|grep nginx 命令看是否有启动，如下：
+
+![](https://img-blog.csdnimg.cn/img_convert/a31f0aef9f5efddf111abbb8cdd94093.png)
+
+1.2、验证配置文件是否正确，因此在启动nginx之前，我们可以先运行下如下命令：
+
+```java
+sudo /usr/local/Cellar/nginx/1.15.5/bin/nginx -t -c /usr/local/etc/nginx/nginx.conf 
+```
+
+注意：一定要注意路径是否是自己的安装路径。这边我的nginx是1.15.5版本的。
+
+![](https://img-blog.csdnimg.cn/img_convert/289baece43ccd42844ad02ce0de18cc2.png)
+
+如果出现如下信息，说明配置文件正确。
+
+```java
+nginx: the configuration file /usr/local/etc/nginx/nginx.conf syntax is ok 
+nginx: configuration file /usr/local/etc/nginx/nginx.conf test is successful
+```
+
+重启nginx有如下几种方法：
+
+1.3、通过brew，brew services start nginx(启动nginx) brew services restart nginx(重启命令)， 如下所示：
+
+![](https://img-blog.csdnimg.cn/img_convert/a16bd742d222dc2437fb9ff0eb172d81.png)
+
+1.4、先进入bin目录：cd /usr/local/Cellar/nginx/1.15.5/bin/， 然后再执行：./nginx -s reload， 如下所示：
+
+![](https://img-blog.csdnimg.cn/img_convert/8cf331d544f447152b1e6969cbad7adf.png)
+
+1.5、根据进程号重启，执行命令 kill -HUP 进程号  如下所示：
+
+![](https://img-blog.csdnimg.cn/img_convert/fc93401b8713981c7ca9a36a84b422b3.png)
+
+#### 2、**nginx停止**
+
+终端输入ps -ef|grep nginx获取到nginx的进程号, 注意是找到“nginx:master”的那个进程号
+
+![](https://img-blog.csdnimg.cn/img_convert/d077d08969630fccd11c1719671d87b9.png)
+
+**注意：**
+
+**kill -QUIT 72 (从容的停止，即不会立刻停止)**
+
+**Kill -TERM 72 （立刻停止）**
+
+**Kill -INT 72 （和上面一样，也是立刻停止）**
+
