@@ -21,12 +21,43 @@ https://www.oracle.com/java/technologies/downloads/#java17
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/3ac0794bde7545bb8d4900f806a1fa0b.png)
 
+
+
+在终端执行命令`echo $SHELL`获得终端类型：
+
+- `/bin/zsh` => `zsh` => `.zshrc`
+- `/bin/bash` => `bash` => `.bash_profile`
+
+```bash
+#修改默认Shell为zsh
+chsh -s /bin/zsh 
+```
+
+ 如果看到的是`/bin/zsh`
+
+```bash
+#配置JAVA_HOME
+sudo echo 'export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home'>> ~/.zshrc
+sudo echo 'export JAVA_17_HOME=/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home'>> ~/.zshrc
+sudo echo 'export PATH="$JAVA_HOME:$PATH"'>> ~/.zshrc
+source ~/.zshrc
+```
+
+如果看到的是`/bin/bash`
+
+```bash
+#配置JAVA_HOME
+sudo echo 'export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home'>> ~/.bash_profile
+sudo echo 'export PATH="$JAVA_HOME:$PATH"'>> ~/.bash_profile
+source ~/.bash_profile
+```
+
+
 打开bash_profile文件。可以在终端vim ~/.bash_profile打开，也可以打开访达shift+cmd+G然后输入/Users/mac/.bash_profile（本机bash_profile的路径）
 
 ```java
 # jdk
-export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home
-export JAVA_11_HOME=/Library/Java/JavaVirtualMachines/jdk-11.0.7.jdk/Contents/Home
+export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home
 export JAVA_17_HOME=/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home
 
 export JAVA_HOME=$JAVA_8_HOME
@@ -38,12 +69,10 @@ export PATH
 export CLASSPATH
 
 alias jdk8="export JAVA_HOME=$JAVA_8_HOME"
-alias jdk11="export JAVA_HOME=$JAVA_11_HOME"
 alias jdk17="export JAVA_HOME=$JAVA_17_HOME"
 ```
 
 执行命令
-j
 
 ### 4.切换jdk
 
