@@ -53,6 +53,7 @@ source ~/.bash_profile
 ```
 
 
+`vim ~/.bash_profile`
 打开bash_profile文件。可以在终端vim ~/.bash_profile打开，也可以打开访达shift+cmd+G然后输入/Users/mac/.bash_profile（本机bash_profile的路径）
 
 ```java
@@ -73,6 +74,8 @@ alias jdk17="export JAVA_HOME=$JAVA_17_HOME"
 ```
 
 执行命令
+
+`source ~/.zshrc`
 
 ### 4.切换jdk
 
