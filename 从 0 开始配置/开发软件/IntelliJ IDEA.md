@@ -6,7 +6,7 @@
 
 激活->
 
-https://docs.qq.com/doc/DSEZOSUZ0eVZmWUZj
+https://www.yuque.com/mengchuaiquezinatiaohaotui-cbutn/wczyq9/gmeap7hxoq1xk651?singleDoc#
 
 
 
