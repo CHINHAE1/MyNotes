@@ -22,6 +22,8 @@
 
 然后会弹出一个对话框，我们在系统变量下新建，然后输入CLASS_PATH和对应的值即可
 
+`.;%JAVA_HOME%\lib\dt.jar;%JAVA_home%\lib\tools.jar`
+
 ![](https://img-blog.csdnimg.cn/direct/2c95bfca04f34cac9aa1c688ca1071c7.png)
 
 然后再去配置我们的JAVA_HOME，我这里三个jdk一共三个JAVA_HOME，再加上一个指定版本的JAVA_HOME，变量名：JAVA(这里的数字就是对应的多少版本)_HOME，变量值就是安装jdk的路径，这个路径主要就是点开文件安装路径后。看到该目录下有bin目录等其他目录，直接复制地址栏上的目录即可
