@@ -67,7 +67,7 @@
 
 ![](https://img-blog.csdnimg.cn/direct/64e07550870447a5a026ff9a244c4961.png)
 
-最后的最后我们只需要在path环境变量中再次新建一个，%JAVA_HOME%\bin，并且把这个放到最上面
+最后的最后我们只需要在path环境变量中再次新建一个， %JAVA_HOME%\bin，并且把这个放到最上面
 
 
 ![](https://img-blog.csdnimg.cn/direct/24dd8d989841440ab313b42dd705a346.png)
