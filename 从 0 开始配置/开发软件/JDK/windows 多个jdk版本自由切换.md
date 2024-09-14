@@ -1,87 +1,79 @@
-## 1、jdk的版本自由切换
+#### JDK安装
 
-### 1.1、[jdk11](https://so.csdn.net/so/search?q=jdk11&spm=1001.2101.3001.7020)，jdk17，jdk21
+##### 1.点击[JDK官方下载地址](https://www.oracle.com/technetwork/java/javase/downloads/index.html "JDK官方下载地址")下载
 
-我的电脑有三个版本的jdk，jdk11就算变成jdk8也是和我接下来的操作是一样的
+![](https://i-blog.csdnimg.cn/blog_migrate/836db2a4b75917adfa44ba5102e0ca41.png)这里还能选择之前的版本下载
+![](https://i-blog.csdnimg.cn/blog_migrate/ba925d386e50e9aec65e5d08e512decd.png)
 
-首先我们确定好三个版本的jdk安装,我这里三个jdk安装的目录都是一样的
-
-![](https://img-blog.csdnimg.cn/direct/62bbdd16179b4fc89eed45e95aba1868.png)
-
-### 1.2、配置环境变量
-
-既然已经安装好了，jdk我们得先配置好环境变量，才能共全局使用
-
-配置环境变量我们直接按下WIN键，搜索环境变量，然后打开即可
-
-![](https://img-blog.csdnimg.cn/direct/323cf8e3213b443ca38b3aee8fef63b9.png)
-
-然后我们点击，环境变量
-
-![](https://img-blog.csdnimg.cn/direct/65a91fc62bf841ffadc2eecea8a5c51a.png)
-
-然后会弹出一个对话框，我们在系统变量下新建，然后输入CLASS_PATH和对应的值即可
-
-`.;%JAVA_HOME%\lib\dt.jar;%JAVA_home%\lib\tools.jar`
-
-![](https://img-blog.csdnimg.cn/direct/2c95bfca04f34cac9aa1c688ca1071c7.png)
-
-然后再去配置我们的JAVA_HOME，我这里三个jdk一共三个JAVA_HOME，再加上一个指定版本的JAVA_HOME，变量名：JAVA(这里的数字就是对应的多少版本)_HOME，变量值就是安装jdk的路径，这个路径主要就是点开文件安装路径后。看到该目录下有bin目录等其他目录，直接复制地址栏上的目录即可
+2）根据电脑[操作系统](https://so.csdn.net/so/search?q=%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F&spm=1001.2101.3001.7020)和位数选择对用的包。Windows的选Windows ，电脑为64位的选x64,32位选x86。安装下载不在赘诉，安装地址可改变，不要有中文。
 
 
-![](https://img-blog.csdnimg.cn/direct/fb39cf0315924fb5a066f4162a60fd07.png)
 
-这里的目录就是以bin的上一级目录就是这个，这个jdk17是这样子的
+![](https://i-blog.csdnimg.cn/blog_migrate/a1281ee49a82c6c32c52b13980635c1c.png)
 
-![](https://img-blog.csdnimg.cn/direct/bec9fa23216e47db92f72678a6b4e9d6.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/d1b9ca3130a542c240dbdacc35707ec3.png)
+#### 2.环境配置
 
-这是jdk21的bin目录的上一级目录不要进去bin目录
+**1.在安装完之后，打开电脑设置->系统->关于->高级系统设置->高级->环境变量。**
 
-![](https://img-blog.csdnimg.cn/direct/55f8de739e014e9c8db706b0ec26623b.png)
+**2.在系统变量中分别设置多个环境变量值，如下表：**
 
-这是jdk11的
+|环境变量名称|环境变量值|
+|---|---|
+|JAVA8_HOME|D:\JAVA\jdk1.8|
+|JAVA17_HOME|D:\JAVA\jdk17|
+|JAVA21_HOME|D:\JAVA\jdk21|
+|JAVA_HOME|%JAVA17_HOME%|
+说明：首先设置一个变量JAVA_HOME，后面JAVA8_HOME，JAVA17_HOME，JAVA21_HOME代表为三个版本取了三个变量名，接着分别是他们的路径。在切换版本时，只需要把第一个JAVA_HOME的变量值改为需要的变量。（环境变量名称按照下载的版本设置，值按安装的地址配置）
 
-![](https://img-blog.csdnimg.cn/direct/ced3b6be3f04470a944377021edc7304.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/5f1430911695345b8b7d7d8468f9f166.png)![](https://i-blog.csdnimg.cn/blog_migrate/25192b180a455f6deaafb275c3203703.png)![](https://i-blog.csdnimg.cn/blog_migrate/e060b471e1e92211a38c2f3666cc5b43.png)
+ **3、新建系统变量，变量名称CLASSPATH，变量值：**
 
-然后我们在配置一个选择版本的JAVA_HOME，变量名依旧是JAVA_HOME只不过这里不需要加数字，然后变量名就是：%JAVA(这里的数字代表着你前面配置的三个JAVA_HOME的名字对应着)_HOME%
+```crystal
+.;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar
+```
 
-比如你要切换为11版本的jdk，那么你的值就可以写成：%JAVA11_HOME%，要切换为21的就写：%JAVA21_HOME%即可，前提是一定要对应
+![](https://i-blog.csdnimg.cn/blog_migrate/f0236e54f3ee575256c882a12d71a844.png)
 
-![](https://img-blog.csdnimg.cn/direct/08a603cdba6e47d5977297065166a91c.png)
+**4、设置系统环境变量Path，加上变量值：%JAVA_HOME%\bin和%JAVA_HOME%\jre\bin**
 
-然后我们在系统变量中找到Path，选中它点击编辑
+![](https://i-blog.csdnimg.cn/blog_migrate/4a4528549cbde9accb59dce7b5f6f8b6.png)
 
-![](https://img-blog.csdnimg.cn/direct/1006406089bc42ef85ca5211fe5bb61c.png)
+**注意：这里的配置得放在Path的最前端，否则也可能测试不成功。**
 
-在这个里面我们配置一下三个JDK的环境变量的bin目录
+##### **3.测试切换版本**
 
-首先我们先找到，jdk11的文件夹的bin目录
+**(1)选择JDK17**
+![](https://i-blog.csdnimg.cn/blog_migrate/c73388661240714d4b7cec438c8b5df0.png)
 
-![](https://img-blog.csdnimg.cn/direct/ed047d30c88240c5b93d9322c66ce2ca.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/29d30cb784c6d62fe34c38616665f004.png)
 
-找到bin目录我们点进去，然后就可以复制地址栏上的地址了，这就是jdk需要配置的最终的环境变量地址，其他的jdk也一样，找到bin目录点进去，然后复制地址
+**（2）选择JDK8**
+![](https://i-blog.csdnimg.cn/blog_migrate/30ebbaf538a5de519dd57150606b8c1f.png)
 
-![](https://img-blog.csdnimg.cn/direct/45a2d1ea01834af994c616277d4fce35.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/8824f63f77896c857adc78432e43b3a1.png) 
 
-然后我们回到path环境变量中，点击新建，然后粘贴我们刚才复制的路径，就好了。三个jdk都需要配置
+**（3）选择JDK21**
+![](https://i-blog.csdnimg.cn/blog_migrate/0b30aaa73820f07c609a070128c27982.png)
 
-![](https://img-blog.csdnimg.cn/direct/64e07550870447a5a026ff9a244c4961.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/123a92681405ba8bc13656da531b24fd.png)
 
-最后的最后我们只需要在path环境变量中再次新建一个， %JAVA_HOME%\bin，并且把这个放到最上面
+##### 4.切换版本失败的原因
 
+**1.将环境变量保存后重新启动cmd**
 
-![](https://img-blog.csdnimg.cn/direct/24dd8d989841440ab313b42dd705a346.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/6e60c1cb86c79a51781c3c0b403bfc21.png)
 
-最后一路确定就可以了，然后重新打开命令提示符，输入java -version就可以看到java 的版本了
+**2、删除javapath的Java文件**
 
-![](https://img-blog.csdnimg.cn/direct/342999db5ff148638401cf245d466adf.png)
+如果切换不成功，这可能是安装jdk时，自动生成了优先级更高的配置项，使用以下方式解决：  
+打开 `C:\ProgramData\Oracle\Java\javapath`。删除底下三个文件。
+java.exe，javaw.exe，javaws.exe
 
-### 1.3、自由切换jdk版本
+3.删除注册表文件
 
-当我们想要修改jdk版本，我不想要21，我有一些需要jdk8才可以运行的jar，我们只需要在，环境变量中的系统变量，改变一下JAVA_HOME的值就可以了，例如我要改成11的jdk版本
+从注册表（运行regedit）windows +R 输入regedit中 删除jdk的默认启动的版本。在HKEY_LOCAL_MACHINE\SOFTWARE\JavaSoft的Java Development Kit的CurrentVersion项的值和Java Runtime Environment的CurrentVersion项的值
 
-![](https://img-blog.csdnimg.cn/direct/1a2c11192c6d443fbff4425c4adcbb7d.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/1e01e55287bdca8af1ddf26a79505084.png)
 
-然后我们一路确定确定，最后重新打开命令提示符，输入 java -version即可修改成功
-
-![](https://img-blog.csdnimg.cn/direct/bffc251c35764ff19c05f5782fa5fa5f.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/97459f912460f16797f0caf3f6957883.png)
