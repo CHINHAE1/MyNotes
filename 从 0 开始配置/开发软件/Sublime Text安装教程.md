@@ -92,33 +92,115 @@
 
 三、Sublime Text激活方法
 
-1、使用浏览器打开该网站https://hexed.it
+【Win版激活破解】
 
-![图片](https://img-blog.csdnimg.cn/img_convert/d46dde3435955be2ca39a543b7fd6456.png)
+找到你的Sublime Text安装目录下的【sublime_text.exe】文件
 
-2、点击“打开文件”，选择sublime text 安装目录中的“sublime_text.exe”
+比如我的是【D:\Program Files\Sublime Text\sublime_text.exe】
 
-![图片](https://img-blog.csdnimg.cn/img_convert/c241b6176ad2c6893e920d461b95fc6e.png)
+直接当前文件夹复制粘贴备份一份【sublime_text.exe】，已经很熟练的同学，可以不备份，直接省略这一步
 
-![图片](https://img-blog.csdnimg.cn/img_convert/62295431bc29933ff43cad118d65ee33.png)
+方式一：
 
-![图片](https://img-blog.csdnimg.cn/img_convert/9e1cb41e527a7e4364c48611cf536287.png)
+1、双击可执行程序【sublime_text.exe】
 
-3、Ctrl + F ，搜索输入807805000f94c1，找到后，并且替换为c64005014885c9。
+2、将【sublime_text.exe】文件拖入刚打开的Sublime Text窗口
 
-![图片](https://img-blog.csdnimg.cn/img_convert/45e415cfac98fa2ec038a254e8ed4a5d.png)
+Tips：对，你没看错，用自己打开自己
 
-![图片](https://img-blog.csdnimg.cn/img_convert/5dc62120600e3bd3dce4d9fe47e0d35b.png)
+3、按快捷键【Ctrl + H】调出“查找和替换”窗口
 
-4、点击“另存为”，保存到本地任意目录，命名为：sublime_text.exe
+【Find】一栏输入【8079 0500 0f94 c2】
 
-![图片](https://img-blog.csdnimg.cn/img_convert/202e2bf4ba30009a011359ae0b4a4600.png)
+【Replace】一栏输入【c641 0501 b200 90】
 
-![图片](https://img-blog.csdnimg.cn/img_convert/acd73d54735fad46bd9c50340b862520.png)
+点击【Replace】按钮，完成替换
 
-![图片](https://img-blog.csdnimg.cn/img_convert/23e3e4979c4039dbb6cfb1a0f9f568fd.png)
+4、按快捷键【Ctrl + Shift + S】另存为...保存到桌面，命名为【sublime_text.exe】
 
-5、找到sublime text安装目录，备份原来的sublime_text.exe，命名为：sublime_text_bak.exe。将新保存的sublime_text.exe复制到原sublime text 4安装目录中。![图片](https://img-blog.csdnimg.cn/img_convert/149be2043b147c5d83ff5055c7d604c1.png)
+5、剪切桌面新保存的【sublime_text.exe】文件替换原安装目录下的【sublime_text.exe】文件
+
+
+
+方式二：
+
+1、浏览器打开【https://hexed.it】
+
+2、点击【打开文件】选择你的Sublime Text安装目录下的【sublime_text.exe】
+
+3、在网页页面右边【搜索框】中输入【807905000F94C2】回车
+
+选中【启用替换】，在【替换为】一栏输入【C6410501B20090】
+
+点击【替换】按钮，完成替换
+
+4、点击【另存为】保存文件到本地桌面，命名为【sublime_text.exe】
+
+5、剪切桌面新保存的【sublime_text.exe】文件替换原安装目录下的【sublime_text.exe】文件
+
+
+
+任一方式成功激活后的信息如下，显示Unlimited User License
+
+
+
+【Mac版激活破解】
+
+1、打开App Store搜索【Hex Fiend】并安装
+
+2、打开Hex Fiend，将【访达 -> 应用程序 -> Sublime Text右键[显示包内容] -> Contents -> MacOS -> sublime_text】文件拖至Hex Fiend中
+
+3、选择Hex Fiend的菜单栏【Edit -> Find -> Find...】
+
+在【Find】一栏复制粘贴【807905000F94C2】
+
+在【Raplace】一栏复制粘贴【C6410501B20090】
+
+点击【Replace All】，完成替换
+
+保存文件并关闭退出Hex Fiend
+
+Tips: 本来点击【Replace】就可以，但发现少数人没查找就替换，导致其实并未修改替换就保存文件退出了，所以直接改成点击【Replace All】，就解决了出现没替换就保存的情况
+
+
+
+4、打开【终端】，如果你没有移动过终端位置，默认位置应该是：【启动台 -> 其他 -> 终端】
+
+结合多数人可能会出现的各种问题，推荐使用以下方法执行命令：
+
+a、在终端里复制粘贴命令【sudo xattr -cr /Applications/Sublime\ Text.app】，回车执行
+
+b、执行完上一条语句会提示输入密码，输入你的开机密码（Tips: 你在输入密码时终端里是什么都不会出现的，你尽管输，一定要输正确哦，输入完回车即可）
+
+c、接着复制粘贴命令【codesign --remove-signature /Applications/Sublime\ Text.app】
+
+成功激活后，信息如下：
+
+
+
+
+
+
+
+情况总结：
+
+第1种情况：知道自己终端权限够的人，这只适合少数人
+
+只需要执行一条命令【codesign --remove-signature /Applications/Sublime\ Text.app】
+
+第2种情况：会出现【应用程序“Sublime Text”无法打开】提示，但懂得手动处理Q4问题的人
+
+只需要执行一条命令【sudo codesign --remove-signature /Applications/Sublime\ Text.app】
+
+执行完会提示输入密码，输入开机密码即可
+
+后续打开Sublime Text时手动处理遇到的Q4问题
+
+第3种情况：我基本没动过终端，也不想手动处理Q4问题
+
+那就使用推荐的方法：按第4点里的abc操作
+
+Tips: Q4指下面【Mac版：Q&A】里的Q4 作者：83Xue https://www.bilibili.com/read/cv36813950/?jump_opus=1 出处：bilibili
 
 
 # mac激活
