@@ -39,6 +39,7 @@ chsh -s /bin/zsh
 #配置JAVA_HOME
 sudo echo 'export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home'>> ~/.zshrc
 sudo echo 'export JAVA_17_HOME=/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home'>> ~/.zshrc
+sudo echo 'export JAVA_21_HOME=/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home'>> ~/.zshrc
 sudo echo 'export PATH="$JAVA_HOME:$PATH"'>> ~/.zshrc
 source ~/.zshrc
 ```
@@ -60,6 +61,7 @@ source ~/.bash_profile
 # jdk
 export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home
 export JAVA_17_HOME=/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home
+export JAVA_21_HOME=/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home
 
 export JAVA_HOME=$JAVA_8_HOME
 JRE_HOME=$JAVA_HOME/jre
@@ -71,6 +73,7 @@ export CLASSPATH
 
 alias jdk8="export JAVA_HOME=$JAVA_8_HOME"
 alias jdk17="export JAVA_HOME=$JAVA_17_HOME"
+alias jdk21="export JAVA_HOME=$JAVA_21_HOME"
 ```
 
 执行命令
