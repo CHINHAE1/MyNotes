@@ -1,3 +1,9 @@
+
+MySQL安装使用（mac、windows）
+https://blog.csdn.net/u014694915/article/details/136520861
+
+
+
 ## 1.下载MySQL
 
 **Mysql官网下载地址[MySQL :: Download MySQL Installer (Archived Versions)](https://downloads.mysql.com/archives/installer/ "MySQL :: Download MySQL Installer (Archived Versions)")**
