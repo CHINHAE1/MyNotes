@@ -18,3 +18,26 @@
 
 重新打开typora看到成功激活！！！
 
+四，关闭软件每次启动时的已激活弹窗
+继续在安装路径下resources\page-dist\license.html，找到
+
+
+
+依旧ctrl+F 定位到：
+
+</body></html>
+
+替换为 
+
+</body><script>window.οnlοad=function(){setTimeout(()=>{window.close();},5);}</script></html>
+
+五，去除软件左下角“未激活”提示
+按照安装路径，找到 resources\locales\zh-Hans.lproj\Panel.json 
+
+
+
+文件中查找："UNREGISTERED":"未激活"，
+
+替换为："UNREGISTERED":" "
+
+最后，重新打开Typora，手动关掉激活窗口，之后就不会再出现。
