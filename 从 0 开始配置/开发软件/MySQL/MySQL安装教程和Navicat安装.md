@@ -1,6 +1,6 @@
 
 # MySQL安装使用（mac、windows）
-# https://blog.csdn.net/u014694915/article/details/136520861
+# 看这个链接 https://blog.csdn.net/u014694915/article/details/136520861
 
 
 
