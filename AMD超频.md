@@ -6,7 +6,8 @@
 
 华硕主板:
 
-![image-20250117183535516](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250117183535516.png)
+![Uploading image.png…]()
+
 
 
 
