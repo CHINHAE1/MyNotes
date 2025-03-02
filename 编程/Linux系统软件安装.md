@@ -1030,7 +1030,7 @@ RabbitMQ在企业开发中十分常见，课程为大家演示快速搭建Rabbit
    ```shell
    # root执行
    # 1. 准备gpgkey密钥
-   rpm --import https://github.com/rabbitmq/signing-keys/releases/download/3.0/rabbitmq-release-signing-key.asc
+   rpm --import 'https://github.com/rabbitmq/signing-keys/releases/download/3.0/rabbitmq-release-signing-key.asc'
    rpm --import https://packagecloud.io/rabbitmq/erlang/gpgkey
    rpm --import https://packagecloud.io/rabbitmq/rabbitmq-server/gpgkey
    
