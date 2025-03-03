@@ -1,5 +1,8 @@
 # 【从零开始学Redis】基础入门篇--超全总结笔记
 
+
+链接：https://blog.csdn.net/2301_79819426/article/details/145501322
+
 1. 初识Redis
 Redis是一种键值型的NoSql数据库，这里有两个关键字：
 
