@@ -8,7 +8,8 @@
 
 找到page-dist/static/js/Licen..如下图 
 
-![](https://img-blog.csdnimg.cn/6448e258546449a5b07a030efa630cd2.png)
+![image.png](https://picgo-q1uill.oss-cn-chengdu.aliyuncs.com/img-for-typora/20250410233319248.png)
+
 
 
 

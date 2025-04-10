@@ -1,22 +1,3 @@
-# 插件
-1. Git
-2. Advanced Tables    `该插件允许用户更方便地创建和编辑复杂的表格`
-3. Attachment Name Formatting
-4. Calendar  `右上角显示日历`
-5. Style Settings(主题可以通过这个调试)
-6. Templater
-7. Commander  `这个插件提供了一个命令面板，让用户可以快速执行各种命令`
-8. Editing Toolbar：`这个插件提供了一个编辑工具栏`
-
-# 主题
-1. Atom
-2. Minimal
-3. Obsidian Nord
-4. Blue Topaz
-5. Chime
-
-
-
 
 # 使用git+obsidian实现双链笔记（macOS)
 
@@ -90,9 +71,16 @@ git config --global user.email "your@email.com"
 
 4）登陆github，点击头像
 
-![](https://uploadfiles.nowcoder.com/images/20230712/67694999_1689157005700/D2B5CA33BD970F64A6301FA75AE2EB22)
+![image.png](https://picgo-q1uill.oss-cn-chengdu.aliyuncs.com/img-for-typora/20250410232535593.png)
 
-![](https://uploadfiles.nowcoder.com/images/20230712/67694999_1689157032133/D2B5CA33BD970F64A6301FA75AE2EB22)![](https://uploadfiles.nowcoder.com/images/20230712/67694999_1689157052201/D2B5CA33BD970F64A6301FA75AE2EB22)
+
+![image.png](https://picgo-q1uill.oss-cn-chengdu.aliyuncs.com/img-for-typora/20250410232612384.png)
+
+
+
+![image.png](https://picgo-q1uill.oss-cn-chengdu.aliyuncs.com/img-for-typora/20250410232623992.png)
+
+
 
 配置完成后，就可以使用 SSH 协议克隆、推送和拉取 GitHub 上的仓库，无需每次输入用户名和密码。
 
@@ -100,11 +88,14 @@ git config --global user.email "your@email.com"
 
 有的同学可能不太清楚如何建立仓库，顺带讲一下。
 
-![](https://uploadfiles.nowcoder.com/images/20230712/67694999_1689157068540/D2B5CA33BD970F64A6301FA75AE2EB22)
+![image.png](https://picgo-q1uill.oss-cn-chengdu.aliyuncs.com/img-for-typora/20250410232639393.png)
+
 
 点击新建，只需要填写三个地方，仓库名，私有还是他人可见，添加一个介绍文件。
 
-![](https://uploadfiles.nowcoder.com/images/20230712/67694999_1689157083800/D2B5CA33BD970F64A6301FA75AE2EB22)
+
+![image.png](https://picgo-q1uill.oss-cn-chengdu.aliyuncs.com/img-for-typora/20250410232656891.png)
+
 
 #### 3.使用git将远程仓库的代码克隆到本地。
 
@@ -124,7 +115,9 @@ cd:change directory切换目录
 
 3)获取仓库ssh地址
 
-![](https://uploadfiles.nowcoder.com/images/20230712/67694999_1689157120426/D2B5CA33BD970F64A6301FA75AE2EB22)
+
+![image.png](https://picgo-q1uill.oss-cn-chengdu.aliyuncs.com/img-for-typora/20250410232706895.png)
+
 
 4）将远程仓库地址拉到本地。
 
@@ -141,18 +134,22 @@ cd:change directory切换目录
 
 里面输入如图:
 
-![](attachments/obsidian_image_1.png)
+![image.png](https://picgo-q1uill.oss-cn-chengdu.aliyuncs.com/img-for-typora/20250410232716659.png)
 
 
-![](attachments/obsidian_image_2.png)
+![image.png](https://picgo-q1uill.oss-cn-chengdu.aliyuncs.com/img-for-typora/20250410232726884.png)
+
 
 ## 2.命令面板快捷键 CTRL + P
 
 1. git Stage ,如果要全部上传,可以直接到第二步选择all change
- ![[Pasted image 20240603132035.png](img/Pasted%20image%2020240603132035.png)
+![image.png](https://picgo-q1uill.oss-cn-chengdu.aliyuncs.com/img-for-typora/20250410232735223.png)
+
+ 
 
 2. git commit staged或者 all changes
 
-![[Pasted image 20240603132131.png](img/Pasted%20image%2020240603132131.png)
+![](https://picgo-q1uill.oss-cn-chengdu.aliyuncs.com/img-for-typora/20250410232742557.png)
+
 
 3. git push

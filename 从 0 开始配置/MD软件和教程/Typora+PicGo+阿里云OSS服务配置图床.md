@@ -40,6 +40,7 @@
 1. 进入 Bucket → **文件管理** → **新建目录**
 2. 输入目录名（如 `md-images`），用于存储 Typora 图片
 
+
 ### 3. 获取 AccessKey
 
 1. 进入 [AccessKey 管理](https://ram.console.aliyun.com/manage/ak)![image-20250303195237587](https://picgo-q1uill.oss-cn-chengdu.aliyuncs.com/img-for-typora/image-20250303195237587.png)

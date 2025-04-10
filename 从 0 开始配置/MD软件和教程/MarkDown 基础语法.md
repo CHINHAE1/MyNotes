@@ -72,5 +72,4 @@
 
 在外部截图,直接粘贴即可
 
-![[Pasted image 20240325145223.png](../%E7%BC%96%E7%A8%8B/%E5%89%8D%E7%AB%AF/img/Pasted%20image%2020240325145223.png)
 
