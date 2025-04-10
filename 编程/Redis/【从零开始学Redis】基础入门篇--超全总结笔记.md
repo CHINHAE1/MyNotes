@@ -8,12 +8,13 @@ Redis是一种键值型的NoSql数据库，这里有两个关键字：
 
 键值型——键值对 key-value
 
+
 NoSql
 
 其中键值型，是指Redis中存储的数据都是以key、value对的形式存储，而value的形式多种多样，可以是字符串、数值、甚至json：
 
 
-![img](https://picgo-q1uill.oss-cn-chengdu.aliyuncs.com/img-for-typora/c0a242773cc04e4bb2934b200d4929dd.png)
+![img|775](https://picgo-q1uill.oss-cn-chengdu.aliyuncs.com/img-for-typora/c0a242773cc04e4bb2934b200d4929dd.png)
 
 而**NoSql则是相对于传统关系型数据库而言，有很大差异的一种数据库**。
 
